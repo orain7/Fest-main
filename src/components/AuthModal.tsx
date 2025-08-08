@@ -174,11 +174,11 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         setIsSuccess(true);
         setTimeout(() => {
           onClose();
-        }, 2000);
+        }, 1500);
       }
     } catch (error: any) {
       console.error('Auth catch error:', error);
-      setErrors({ general: 'An unexpected error occurred. Please try again.' });
+      setErrors({ general: 'Connection error. Please check your internet and try again.' });
     } finally {
       setIsSubmitting(false);
     }
